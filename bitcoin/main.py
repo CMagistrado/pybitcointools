@@ -348,7 +348,7 @@ def hash160(string):
 
 
 def bin_sha256(string):
-    binary_data = string if isinstance(string, bytes) else bytes(string, 'utf-8')
+    binary_data = string if isinstance(string, bytes) else bytes(string.encode('utf-8'))
     return hashlib.sha256(binary_data).digest()
 
 def sha256(string):
